@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{F35D0A2F-AB61-42A9-9B72-67BE2ADF36C8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hydra.Net.RPC</RootNamespace>
+    <AssemblyName>Hydra.Net.RPC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommandBus.cs" />
+    <Compile Include="Common\CRC32.cs" />
+    <Compile Include="Log\HydraLog.cs" />
+    <Compile Include="Json\JsonValue.cs" />
+    <Compile Include="Log\LogLevelType.cs" />
+    <Compile Include="RPC\Sync\PostCallItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPC\Command\RPCBinaryCommand.cs" />
+    <Compile Include="RPC\Server\RPCClient.cs" />
+    <Compile Include="RPC\Command\RPCCommand.cs" />
+    <Compile Include="RPC\Command\RPCCommandType.cs" />
+    <Compile Include="RPC\Pack\RPCDataPackage.cs" />
+    <Compile Include="RPC\Pack\RPCDataSerializer.cs" />
+    <Compile Include="RPC\Command\RPCJsonCommand.cs" />
+    <Compile Include="RPC\Pack\RPCProtocolParser.cs" />
+    <Compile Include="RPC\Server\RPCServer.cs" />
+    <Compile Include="RPC\Server\RPCSession.cs" />
+    <Compile Include="RPC\Sync\RPCSyncCmdMgt.cs" />
+    <Compile Include="RPC\Sync\RPCSyncItem.cs" />
+    <Compile Include="RPC\RPCUitlity.cs" />
+    <Compile Include="RPC\Sync\SyncCallItem.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
