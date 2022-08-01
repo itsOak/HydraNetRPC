@@ -39,8 +39,7 @@ namespace Hydra.Net.RPC
 			if (null != _handlers && _handlers.Count > 0)
 			{
 				JsonValue value = JsonValue.Parse(jsonData);
-				bool flag2 = value == null;
-				if (flag2)
+				if (null == value)
 				{
 					HydraLog.WriteLine("解析json信令失败", LogLevelType.INFO, 1);
 				}
